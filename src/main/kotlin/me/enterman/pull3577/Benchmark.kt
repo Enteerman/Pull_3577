@@ -30,7 +30,7 @@ open class Benchmark {
     }
 
     private fun CharSequence.endsWithAny(arrayStrings: Array<String>) =
-        arrayStrings.any { this.startsWith(it, ignoreCase = true) }
+        arrayStrings.any { this.endsWith(it, ignoreCase = true) }
 
     @Benchmark
     fun endsWithAny(state: RandomStringsState, blackhole: Blackhole) {
